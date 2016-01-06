@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kEY-m0-pwm">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="MavenPro-Medium.ttf">
+            <string>MavenProMedium</string>
+            <string>MavenProMedium</string>
+            <string>MavenProMedium</string>
+            <string>MavenProMedium</string>
+            <string>MavenProMedium</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Countries-->
+        <scene sceneID="seI-SA-IC4">
+            <objects>
+                <viewController id="gdc-ux-pUO" customClass="VisitedTableViewController" customModule="VCountries" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MpN-pI-C5y"/>
+                        <viewControllerLayoutGuide type="bottom" id="2aX-ip-GT8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3fA-fT-ext">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hnm-lA-6f9">
+                                <rect key="frame" x="4" y="108" width="592" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryCell" rowHeight="80" id="WfH-No-gBx" customClass="CountryTableViewCell" customModule="VCountries" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="86" width="592" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WfH-No-gBx" id="2O7-fP-2ZR">
+                                            <rect key="frame" x="0.0" y="0.0" width="592" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yeV-QI-BeM">
+                                                    <rect key="frame" x="8" y="8" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="yeV-QI-BeM" secondAttribute="height" multiplier="1:1" id="uJU-iT-oyj"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1P-hi-pTW">
+                                                    <rect key="frame" x="80" y="8" width="504" height="63"/>
+                                                    <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="m1P-hi-pTW" firstAttribute="trailing" secondItem="2O7-fP-2ZR" secondAttribute="trailingMargin" id="CnL-uu-hzm"/>
+                                                <constraint firstItem="m1P-hi-pTW" firstAttribute="top" secondItem="2O7-fP-2ZR" secondAttribute="topMargin" id="Dwg-Om-pR0"/>
+                                                <constraint firstItem="m1P-hi-pTW" firstAttribute="bottom" secondItem="2O7-fP-2ZR" secondAttribute="bottomMargin" id="U1m-w9-QvJ"/>
+                                                <constraint firstItem="m1P-hi-pTW" firstAttribute="leading" secondItem="yeV-QI-BeM" secondAttribute="trailing" constant="8" id="UDf-cs-mXv"/>
+                                                <constraint firstItem="yeV-QI-BeM" firstAttribute="top" secondItem="2O7-fP-2ZR" secondAttribute="topMargin" id="bk3-1D-jaZ"/>
+                                                <constraint firstItem="yeV-QI-BeM" firstAttribute="leading" secondItem="2O7-fP-2ZR" secondAttribute="leadingMargin" id="eqb-qJ-uge"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="yeV-QI-BeM" secondAttribute="bottom" constant="-1" id="f03-P0-RrN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="flagImageView" destination="yeV-QI-BeM" id="m6v-Ai-32g"/>
+                                            <outlet property="nameLabel" destination="m1P-hi-pTW" id="BTh-j7-mMG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="gdc-ux-pUO" id="gcj-5A-a0P"/>
+                                    <outlet property="delegate" destination="gdc-ux-pUO" id="12f-vA-el3"/>
+                                </connections>
+                            </tableView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dKg-j6-CZA">
+                                <rect key="frame" x="4" y="0.0" width="592" height="600"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="koH-EP-hou">
+                                <rect key="frame" x="20" y="72" width="560" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <segments>
+                                    <segment title="Map"/>
+                                    <segment title="List"/>
+                                    <segment title="Visited"/>
+                                    <segment title="Planned"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.32156862745098036" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="viewTypeSegmentedControlChanged:" destination="gdc-ux-pUO" eventType="valueChanged" id="6Zm-kp-uP3"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dKg-j6-CZA" firstAttribute="top" secondItem="3fA-fT-ext" secondAttribute="top" id="1pi-uy-y1m"/>
+                            <constraint firstItem="2aX-ip-GT8" firstAttribute="top" secondItem="hnm-lA-6f9" secondAttribute="bottom" id="359-qS-zoD"/>
+                            <constraint firstItem="hnm-lA-6f9" firstAttribute="top" secondItem="koH-EP-hou" secondAttribute="bottom" constant="8" id="8K1-Ja-sn4"/>
+                            <constraint firstItem="2aX-ip-GT8" firstAttribute="top" secondItem="dKg-j6-CZA" secondAttribute="bottom" id="CMX-fj-5eN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hnm-lA-6f9" secondAttribute="trailing" constant="-16" id="HL3-qG-1p5"/>
+                            <constraint firstItem="koH-EP-hou" firstAttribute="top" secondItem="MpN-pI-C5y" secondAttribute="bottom" constant="8" id="IP2-GL-XZ8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dKg-j6-CZA" secondAttribute="trailing" constant="-16" id="TM8-mA-vtq"/>
+                            <constraint firstItem="koH-EP-hou" firstAttribute="leading" secondItem="3fA-fT-ext" secondAttribute="leadingMargin" id="Uij-SS-aXP"/>
+                            <constraint firstItem="dKg-j6-CZA" firstAttribute="top" secondItem="koH-EP-hou" secondAttribute="bottom" constant="8" id="a3D-QJ-HEm"/>
+                            <constraint firstItem="dKg-j6-CZA" firstAttribute="leading" secondItem="3fA-fT-ext" secondAttribute="leadingMargin" constant="-16" id="cdm-BG-YZV"/>
+                            <constraint firstItem="koH-EP-hou" firstAttribute="trailing" secondItem="3fA-fT-ext" secondAttribute="trailingMargin" id="iSc-rF-hqv"/>
+                            <constraint firstItem="hnm-lA-6f9" firstAttribute="leading" secondItem="3fA-fT-ext" secondAttribute="leadingMargin" constant="-16" id="umx-oo-wCq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="a3D-QJ-HEm"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Countries" id="hb2-ye-1rS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="51B-Na-YI1">
+                            <connections>
+                                <segue destination="lBd-Wl-mjl" kind="show" identifier="ShowInfo" id="yuK-y9-Ocb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="dKg-j6-CZA" id="MaL-dt-h56"/>
+                        <outlet property="tableView" destination="hnm-lA-6f9" id="5WM-eP-ECL"/>
+                        <outlet property="viewTypeSegmentedControl" destination="koH-EP-hou" id="2up-ZI-olS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bei-NV-1XZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1681" y="-4"/>
+        </scene>
+        <!--Information View Controller-->
+        <scene sceneID="FLn-eo-L12">
+            <objects>
+                <viewController id="lBd-Wl-mjl" customClass="InformationViewController" customModule="VCountries" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5GU-QT-PQ2"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sw0-Tr-1Tm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hju-au-YBf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="HlY-aX-NW6">
+                                <rect key="frame" x="4" y="64" width="592" height="536"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total countries : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gp3-22-XxN">
+                                <rect key="frame" x="20" y="142" width="560" height="24"/>
+                                <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.32156862749999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Countries statistics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQK-d8-KaW">
+                                <rect key="frame" x="20" y="104" width="560" height="30"/>
+                                <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.32156862749999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visited : 0 (0%)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcs-Vk-xcd">
+                                <rect key="frame" x="20" y="174" width="560" height="24"/>
+                                <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.32156862749999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planned : 0 (0%)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYc-MG-SJH">
+                                <rect key="frame" x="20" y="206" width="560" height="24"/>
+                                <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.32156862749999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BYc-MG-SJH" firstAttribute="leading" secondItem="Hju-au-YBf" secondAttribute="leadingMargin" id="3Mg-FI-Jk5"/>
+                            <constraint firstItem="HlY-aX-NW6" firstAttribute="top" secondItem="5GU-QT-PQ2" secondAttribute="bottom" id="7Qm-yJ-K0z"/>
+                            <constraint firstItem="HlY-aX-NW6" firstAttribute="leading" secondItem="Hju-au-YBf" secondAttribute="leadingMargin" constant="-16" id="Act-mW-8eA"/>
+                            <constraint firstItem="BYc-MG-SJH" firstAttribute="top" secondItem="jcs-Vk-xcd" secondAttribute="bottom" constant="8" id="G2l-jT-OdN"/>
+                            <constraint firstItem="Gp3-22-XxN" firstAttribute="trailing" secondItem="Hju-au-YBf" secondAttribute="trailingMargin" id="OUU-N4-dv4"/>
+                            <constraint firstItem="BYc-MG-SJH" firstAttribute="trailing" secondItem="Hju-au-YBf" secondAttribute="trailingMargin" id="QiV-JO-vJS"/>
+                            <constraint firstItem="KQK-d8-KaW" firstAttribute="leading" secondItem="Hju-au-YBf" secondAttribute="leadingMargin" id="Qso-LT-hD7"/>
+                            <constraint firstItem="jcs-Vk-xcd" firstAttribute="trailing" secondItem="Hju-au-YBf" secondAttribute="trailingMargin" id="SWF-GM-1Fb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HlY-aX-NW6" secondAttribute="trailing" constant="-16" id="UVK-4i-NZw"/>
+                            <constraint firstItem="KQK-d8-KaW" firstAttribute="top" secondItem="5GU-QT-PQ2" secondAttribute="bottom" constant="40" id="YEG-7y-hFm"/>
+                            <constraint firstItem="KQK-d8-KaW" firstAttribute="trailing" secondItem="Hju-au-YBf" secondAttribute="trailingMargin" id="dDk-eK-RTw"/>
+                            <constraint firstItem="jcs-Vk-xcd" firstAttribute="leading" secondItem="Hju-au-YBf" secondAttribute="leadingMargin" id="iem-aF-LsU"/>
+                            <constraint firstItem="Gp3-22-XxN" firstAttribute="leading" secondItem="Hju-au-YBf" secondAttribute="leadingMargin" id="lnV-Pa-IUe"/>
+                            <constraint firstItem="Sw0-Tr-1Tm" firstAttribute="top" secondItem="HlY-aX-NW6" secondAttribute="bottom" id="nZP-iQ-hiZ"/>
+                            <constraint firstItem="Gp3-22-XxN" firstAttribute="top" secondItem="KQK-d8-KaW" secondAttribute="bottom" constant="8" id="xsm-0K-tIW"/>
+                            <constraint firstItem="jcs-Vk-xcd" firstAttribute="top" secondItem="Gp3-22-XxN" secondAttribute="bottom" constant="8" id="zUg-IK-jtk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="plannedCountriesLbl" destination="BYc-MG-SJH" id="CAh-Om-jcf"/>
+                        <outlet property="totalCountriesLbl" destination="Gp3-22-XxN" id="L3e-Ea-iuK"/>
+                        <outlet property="visitedCountriesLbl" destination="jcs-Vk-xcd" id="rJB-d1-oIH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LXB-0b-WeB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2327" y="-4"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0X4-f4-p2G">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kEY-m0-pwm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oJX-at-pvB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gdc-ux-pUO" kind="relationship" relationship="rootViewController" id="tYs-JI-98w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4sH-1G-ptj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869" y="-4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="400" height="540"/>
+    </resources>
+</document>

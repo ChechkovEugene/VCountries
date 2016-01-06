@@ -1,0 +1,16 @@
+PODS:
+  - iOS-KML-Framework (HEAD based on 0.0.2):
+    - TBXML (~> 1.5)
+  - Reachability (HEAD based on 3.2)
+  - TBXML (1.5)
+
+DEPENDENCIES:
+  - iOS-KML-Framework (HEAD)
+  - Reachability (HEAD)
+
+SPEC CHECKSUMS:
+  iOS-KML-Framework: a3428baabee9bba6fa8d8246223619277f1bc430
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  TBXML: 9f9dadb239f2f2af1dadb87fe43a0ce6e479379a
+
+COCOAPODS: 0.39.0
